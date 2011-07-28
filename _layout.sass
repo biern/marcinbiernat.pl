@@ -1,0 +1,50 @@
+// _layout.sass
+
+=debug-border( $color: black, $width: 1px, $style: dotted )
+  border= $width $color $style
+
+=debug-background( $color: grey, $opacity: 1 )
+  background= $color
+  opacity= $opacity
+
+
+
+#layout-header,
+#layout-menu,
+#layout-submenu,
+#layout-content,
+#layout-footer
+  //+debug-border
+  //debug-background(red, 0.2)
+  //background: pink
+
+
+#layout-header
+  text-align: right
+  margin:
+    right: 50px
+
+#layout-menu
+  float: right
+  width: 180px
+
+#layout-submenu
+  float: right
+  width: 150px
+
+// Nieużywany
+// #layout-content-wrapper
+//   float: left
+//   margin:
+//     left: 0px
+//     right: 350px
+
+#layout-content
+
+  margin:
+    left: 0px
+  overflow: hidden
+
+#layout-footer
+  clear: both
+
