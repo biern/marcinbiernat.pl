@@ -15,7 +15,7 @@ $color2: #ABBFD8
 // Lekkie tło
 $color3: #EEEEEE
 // Mocne tło
-$color3_dark: #828282
+$color3_dark: #CCCCCC
 // Wyróżnienie 2 (elementy)
 
 $color4: #DB2B2B
@@ -123,10 +123,11 @@ ul
 
 #header
   #logo
+    /* font-family: 'Leckerli One', cursive
     display: inline-block
-    font-weight: 200
+    font-weight: 900
     text-align: center
-    font-size: 18pt
+    font-size: 22pt
     color: $color2
     /* border:
     /*   left: 8px solid $color1
@@ -136,18 +137,25 @@ ul
 #content-fixed-bg
   position: fixed
   display: block
-  height: 300px
-  background: red
+  left: 0px + 8px // + 8px
+  right: 180px + 150px + 10px + 8px // + 8px
+  top: 0px
+  bottom: 0px
+  background: #1D1F24
+
 
 
 #content
+  z-index: 2
   padding: 40px
   min-height: $min_height
   margin: 0px 10px 0px 0px
   /* background-color: $bg_color
   /* border: 5px dashed #24272D
-  border-left: 8px dashed $bg_color
-  border-right: 8px dashed $bg_color
+  border-top: 14px solid $bg_color
+  border-bottom: 14px solid $bg_color
+  border-left: 12px dashed $bg_color
+  border-right: 12px dashed $bg_color
 
   background: #1D1F24
 
