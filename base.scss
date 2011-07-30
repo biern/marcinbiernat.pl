@@ -1,12 +1,14 @@
+// blueish-grey #A0AEC5;
+
 // Basic palete
 $color1: #a4c152;
-$color2: #69ba57;
+$color2: #E6A93F;
 $color3: #aaaaaa;
 
 $bg_color: #22252a;
 $bg_color2: #1d1f24;
 
-$logo_color: $color2;
+$logo_color: $color1;
 
 $menu_link_color: $color3;
 
@@ -107,6 +109,11 @@ a {
   }
 }
 
+.read-more {
+    font-size: 90%;
+    margin-left: 5px;
+}
+
 ul {
   color: $color3;
   list-style: square;
@@ -145,7 +152,11 @@ ul {
 
 // TODO
 #footer {
+  color: $color3;
   background-color: $bg_color;
+  font-size: 10pt;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 #menu, #submenu {
