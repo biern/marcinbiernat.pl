@@ -17,14 +17,17 @@ $text_color: #e4e4e4;
 $link_color: $color1;
 $link_alt_color: $color2;
 
-$code_bg_color: white;
-$code_border_color: darkgrey;
+$code_bg_color: #1D1F25;
+$code_border_color: $bg_color;
 
 $form_bg_color: #e4e4e4;
 $form_text_color: $bg_color;
 $form_border_color: $bg_color;
 
 // Non-color variables
+
+$font-family-reading: helvetica;
+$font-family-nice: 'Kreon', serif;
 
 $style: "solid";
 
@@ -36,18 +39,31 @@ $min_content_height: 400px;
 @import "layout";
 @import "blog";
 
+/* Font */
+h1, h2, h3, #logo, .category, .section {
+
+}
+
 /* General */
 
 body {
   font-size: 14pt; // 110%
-  font-family: helvetica;
+  font-family: $font-family-nice;
   min-width: 640px;
   background: $bg_color;
   color: $text_color;
 }
 
 #layout-content-fixed-bg {
+  /* top: $min_content_height; */
   background: $bg_color2;
+  border: {
+      color: $bg_color;
+      style: dashed;
+      width: 12px;
+      top: none;
+      bottom: none;
+  }
 }
 
 h1, h2 {
@@ -55,24 +71,32 @@ h1, h2 {
 }
 
 .post {
-  display: inline-block;
-  @if $style == "rounded" {
-      @include border-radius(10px);
-  }
-  border: {
-      left: 12px solid $color3;
-      top: 3px solid $bg_color2;
-      bottom: 3px solid $bg_color2;
-  }
-  padding-left: 5px;
-  .title {
-    color: $color1;
-    margin-bottom: 5px;
-    margin-top: 2px;
-  }
-  .info {
-    font-size: 11pt; // 80%
-  }
+    .header {
+        display: inline-block;
+        @if $style == "rounded" {
+            @include border-radius(10px);
+        }
+        border: {
+            left: 12px solid $color3;
+            top: 3px solid $bg_color2;
+            bottom: 3px solid $bg_color2;
+        }
+        padding-left: 5px;
+        .title {
+            color: $color1;
+            margin-bottom: 5px;
+            margin-top: 2px;
+            a {
+                text-decoration: none;
+            }
+        }
+        .info {
+            font-size: 11pt; // 80%
+        }
+    }
+    p:first-letter {
+        font-size: 110%;
+    }
 }
 
 a {
@@ -80,13 +104,12 @@ a {
   text-decoration: none;
   &:hover {
     color: $link_alt_color;
-    text-decoration: none;
+    text-decoration: underline;
   }
   img {
     border: none;
   }
   &.box-link, &.tag {
-    color: $link_color;
     font-size: 10pt;
     font-weight: bolder;
 
@@ -101,13 +124,13 @@ a {
       right: 2px;
     };
 
-    /* @include border-radius(8px); */
+    @include border-radius(8px);
 
     &:hover {
-        border-color: $link_alt_color;
+        border-color: $link_color;
         border: {
-            bottom: 1px solid $link_color;
-            right: 1px solid $link_color;
+            bottom: 1px solid;
+            right: 1px solid;
         }
         margin-right: 1px;
         text-decoration: none;
@@ -130,11 +153,14 @@ ul {
 #header {
   #logo {
     color: $logo_color;
-    /* font-family: 'Leckerli One', cursive */
     display: inline-block;
     font-weight: 900;
     text-align: center;
     font-size: 22pt;
+    margin-right: 20px;
+    a:hover {
+        text-decoration: none;
+    }
   }
   #sublogo {
     position: relative;
@@ -216,6 +242,9 @@ ul {
 /* ; Other */
 
 pre, .code {
+  font-size: 12pt;
+  background-color: $code_bg_color;
+  border: 5px solid $code_border_color;
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap !important;
@@ -224,9 +253,11 @@ pre, .code {
   /* width: 99%; */
   word-wrap: break-word;
   font-family: "monospace";
-  background-color: $code_bg_color;
   padding: 3px;
-  border: 1px solid $code_border_color;
+  .lineno: {
+      border-right: 1px solid $code_border_color;
+  }
+
   margin: {
     left: 5px;
     top: 3px;
