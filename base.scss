@@ -43,10 +43,16 @@ body {
   font-family: helvetica;
   min-width: 640px;
   background: $bg_color;
-  color: $text_color; }
+  color: $text_color;
+}
+
+#layout-content-fixed-bg {
+  background: $bg_color2;
+}
 
 h1, h2 {
-  color: $color3; }
+  color: $color3;
+}
 
 .post {
   display: inline-block;
