@@ -1,3 +1,6 @@
+$menu-width: 180px;
+$submenu-width: 150px;
+
 #layout-header,
 #layout-menu,
 #layout-submenu,
@@ -11,24 +14,26 @@
 #layout-header {
   text-align: right;
   margin: {
-    right: 180px; }; }
+    right: $submenu-width + 30px;
+  };
+}
 
 #layout-menu {
-  margin-right: 180px;
+  margin-right: $submenu-width + 30px;
   text-align: right;
-  /* width: 180px */ }
+  /* width: $menu-width */ }
 
 #layout-submenu {
   position: fixed;
   right: 0px;
-  width: 150px; }
+  width: $submenu_width; }
 
 #layout-content-fixed-bg {
   z-index: -1;
   position: fixed;
   display: block;
   left: 0px + 8px;
-  right: 150px + 10px + 8px;
+  right: $submenu_width + 10px + 8px;
   top: 0px;
   bottom: 0px;
 }
@@ -36,7 +41,7 @@
 #layout-content {
   margin: {
     left: 0px;
-    right: 150px; };
+    right: $submenu_width; };
   overflow: hidden; }
 
 #layout-footer {
