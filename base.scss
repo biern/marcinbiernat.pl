@@ -77,12 +77,13 @@ h1, h2 {
             @include border-radius(10px);
         }
         border: {
-            left: 12px solid $color3;
+            left: 10px solid $color3;
             top: 3px solid $bg_color2;
             bottom: 3px solid $bg_color2;
         }
         padding-left: 5px;
         .title {
+            font-size: 22pt;
             color: $color1;
             margin-bottom: 5px;
             margin-top: 2px;
