@@ -1,0 +1,245 @@
+// Basic palete
+$color1: #a4c152;
+$color2: #69ba57;
+$color3: #aaaaaa;
+
+$bg_color: #22252a;
+$bg_color2: #1d1f24;
+
+$logo_color: $color2;
+
+$menu_link_color: $color3;
+
+$text_color: #e4e4e4;
+
+$link_color: $color1;
+$link_alt_color: $color2;
+
+$code_bg_color: white;
+$code_border_color: darkgrey;
+
+$form_bg_color: #e4e4e4;
+$form_text_color: $bg_color;
+$form_border_color: $bg_color;
+
+// Non-color variables
+
+$style: "solid";
+
+$show_subsection_img_w: 10px;
+
+$min_content_height: 400px;
+
+@import "utils";
+@import "layout";
+@import "blog";
+
+/* General */
+
+body {
+  font-size: 14pt; // 110%
+  font-family: helvetica;
+  min-width: 640px;
+  background: $bg_color;
+  color: $text_color; }
+
+h1, h2 {
+  color: $color3; }
+
+.post {
+  display: inline-block;
+  @if $style == "rounded" {
+      @include border-radius(10px);
+  }
+  border: {
+      left: 12px solid $color3;
+      top: 3px solid $bg_color2;
+      bottom: 3px solid $bg_color2;
+  }
+  padding-left: 5px;
+  .title {
+    color: $color1;
+    margin-bottom: 5px;
+    margin-top: 2px;
+  }
+  .info {
+    font-size: 11pt; // 80%
+  }
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+  &:hover {
+    color: $link_alt_color;
+    text-decoration: none;
+  }
+  img {
+    border: none;
+  }
+  &.box-link, &.tag {
+    color: $link_color;
+    font-size: 10pt;
+    font-weight: bolder;
+
+    padding: {
+      left: 5px;
+      right: 5px;
+      top: 1px;
+      bottom: 1px;
+    };
+    margin: {
+      left: 2px;
+      right: 2px;
+    };
+
+    /* @include border-radius(8px); */
+
+    &:hover {
+        border-color: $link_alt_color;
+        border: {
+            bottom: 1px solid $link_color;
+            right: 1px solid $link_color;
+        }
+        margin-right: 1px;
+        text-decoration: none;
+    }
+  }
+}
+
+ul {
+  color: $color3;
+  list-style: square;
+}
+
+/* main elements */
+
+#header {
+  #logo {
+    color: $logo_color;
+    /* font-family: 'Leckerli One', cursive */
+    display: inline-block;
+    font-weight: 900;
+    text-align: center;
+    font-size: 22pt;
+  }
+  #sublogo {
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+    margin-bottom: -30px;
+  }
+}
+
+#content {
+  border-top: 14px solid $bg_color;
+  border-bottom: 14px solid $bg_color;
+  border-left: 12px dashed $bg_color;
+  border-right: 12px dashed $bg_color;
+  background: $bg_color2;
+  z-index: 2;
+  padding: 40px;
+  min-height: $min_content_height;
+  margin: 0px 10px 0px 0px;
+}
+
+// TODO
+#footer {
+  background-color: $bg_color;
+}
+
+#menu, #submenu {
+  .category {
+
+  }
+  .show-subsection {
+    float: left;
+    height: 20px;
+  }
+  .section {
+    font-size: 18pt; // 130%
+    padding: {
+      right: 15px;
+      left: 15px;
+      top: 3px;
+      bottom: 3px;
+    };
+  }
+  a.section {
+    color: $color3;
+    text-decoration: none;
+    &:hover {
+      border-bottom: 3px solid $color2;
+    }
+  }
+
+  .summary {
+    font-size: 11pt; // small
+    margin-bottom: 3px;
+    padding: 5px 0 3px 0;
+    ul {
+      padding: 0px;
+      margin: 0px;
+      list-style: square;
+      padding-left: 22px;
+    }
+    a {
+
+    }
+  }
+}
+
+#menu {
+
+}
+
+#submenu {
+  padding-top: 20px; }
+
+/* ; Other */
+
+pre, .code {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  /* width: 99%; */
+  word-wrap: break-word;
+  font-family: "monospace";
+  background-color: $code_bg_color;
+  padding: 3px;
+  border: 1px solid $code_border_color;
+  margin: {
+    left: 5px;
+    top: 3px;
+    bottom: 3px;
+  };
+}
+
+// Form
+
+.field-wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  textarea, input[type="text"], .textarea, .text {
+    color: $form_text_color;
+    background-color: $form_bg_color;
+    padding: 5px;
+    border: 3px solid $form_border_color;
+    @include border-radius(3px);
+    display: block;
+    width: 100%;
+  }
+  .textarea, textarea {
+    font-size: 15pt; // 120%
+    height: 120px;
+  }
+  .text, input[type="text"] {
+    text-align: center;
+    font-size: 22pt; // 150%
+  }
+  label: {
+    text-indent: 10px;
+  };
+}
