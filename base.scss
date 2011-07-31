@@ -12,13 +12,13 @@ $logo_color: $color1;
 
 $menu_link_color: $color3;
 
-$text_color: #e4e4e4;
+$text_color: #c0c0c0;
 
 $link_color: $color1;
 $link_alt_color: $color2;
 
 $code_bg_color: $bg_color;
-$code_border_color: $bg_color;
+$code_border_color: $color3;
 
 $form_bg_color: #e4e4e4;
 $form_text_color: $bg_color;
@@ -38,9 +38,10 @@ $min_content_height: 400px;
 @import "utils";
 @import "layout";
 @import "blog";
+@import "pygments-monokai";
 
-/* Font */
-h1, h2, h3, #logo, .category, .section {
+/* Super fancy font if any */
+h1, h2, h3, #logo, .section {
 
 }
 
@@ -71,7 +72,8 @@ h1, h2 {
 }
 
 .post {
-    .header {
+    margin-bottom: 40px;
+    &> .header {
         display: inline-block;
         @if $style == "rounded" {
             @include border-radius(10px);
@@ -95,8 +97,15 @@ h1, h2 {
             font-size: 11pt; // 80%
         }
     }
-    p:first-letter {
-        font-size: 110%;
+    .content {
+        /* font-family: $font-family-reading; */
+    }
+    p {
+        text-indent: 20px;
+        line-height: 130%;
+        &:first-letter {
+            /* font-size: 110%; */
+        }
     }
 }
 
@@ -192,10 +201,16 @@ ul {
   text-align: center;
 }
 
-#menu, #submenu {
-  .category {
-
+#menu {
+  ul {
+      margin: 0px;
   }
+  li {
+      display: inline;
+  }
+}
+
+#menu, #sidebar {
   .show-subsection {
     float: left;
     height: 20px;
@@ -237,15 +252,20 @@ ul {
 
 }
 
-#submenu {
-  padding-top: 20px; }
+#sidebar {
+  padding-top: 20px;
+}
 
 /* ; Other */
 
 pre, .code {
   font-size: 11pt;
   background-color: $code_bg_color;
-  border: 5px solid $code_border_color;
+  border: 1px solid $code_border_color;
+  border: {
+      left: none;
+      right: none;
+  };
   overflow-x: auto;
   white-space: pre-wrap;
   white-space: -moz-pre-wrap !important;
