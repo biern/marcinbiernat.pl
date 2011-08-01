@@ -64,7 +64,7 @@ $min_content_height: 400px;
 }
 
 
-#menu {
+nav {
   ul {
       margin: 0px;
   }
@@ -82,7 +82,7 @@ $min_content_height: 400px;
       bottom: 3px;
     };
     &:hover {
-      border-bottom: 3px solid $color2;
+
     }
   }
 }
@@ -127,7 +127,7 @@ $min_content_height: 400px;
   margin: 0px 10px 0px 0px;
 }
 
-#footer {
+footer {
   color: $color3;
   background-color: $bg_color;
   font-size: 10pt;
