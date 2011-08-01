@@ -3,7 +3,7 @@
 // Basic palete
 $color1: #a4c152;
 $color2: #E6A93F;
-$color3: #aaaaaa;
+$color3: #c0c0c0;
 
 $bg_color: #22252a;
 $bg_color2: #1d1f24;
@@ -12,7 +12,7 @@ $logo_color: $color1;
 
 $menu_link_color: $color3;
 
-$text_color: #c0c0c0;
+$text_color: $color3;
 
 $link_color: $color1;
 $link_alt_color: $color2;
@@ -160,7 +160,6 @@ a {
 }
 
 ul {
-  color: $color3;
   list-style: square;
 }
 
