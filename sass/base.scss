@@ -1,0 +1,260 @@
+// blueish-grey #A0AEC5;
+
+// Basic palete
+$color1: #a4c152;
+$color2: #E6A93F;
+$color3: #c0c0c0;
+
+$bg_color: #22252a;
+$bg_color2: #1d1f24;
+
+$logo_color: $color1;
+
+$menu_link_color: $color3;
+
+$text_color: $color3;
+
+$link_color: $color1;
+$link_alt_color: $color2;
+
+$code_bg_color: $bg_color;
+$code_border_color: $color3;
+
+$form_bg_color: #e4e4e4;
+$form_text_color: $bg_color;
+$form_border_color: $color3;
+
+// Non-color variables
+
+$font-family-reading: helvetica;
+$font-family-nice: 'Kreon', serif;
+
+$style: "rounded";
+
+$show_subsection_img_w: 10px;
+
+$min_content_height: 400px;
+
+@import "utils";
+@import "layout";
+@import "blog";
+@import "pygments-native";
+
+/* singletons */
+
+#logo {
+  color: $logo_color;
+  display: inline-block;
+  font-weight: 900;
+  text-align: center;
+  font-size: 22pt;
+  margin-right: 20px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+#logo-sub {
+  position: relative;
+  height: 30px;
+  bottom: 30px;
+  right: 40px;
+  margin-bottom: -30px;
+}
+
+
+#menu {
+  ul {
+      margin: 0px;
+  }
+  li {
+      display: inline;
+  }
+  a {
+    color: $color3;
+    text-decoration: none;
+    font-size: 18pt; // 130%
+    padding: {
+      right: 15px;
+      left: 15px;
+      top: 3px;
+      bottom: 3px;
+    };
+    &:hover {
+      border-bottom: 3px solid $color2;
+    }
+  }
+}
+
+#sidebar {
+  padding-top: 20px;
+  font-size: 11pt; // small
+  margin-bottom: 3px;
+  padding: 5px 0 3px 0;
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: square;
+    padding-left: 22px;
+  }
+  .sidebar-section {
+    font-size: 14pt;
+  }
+}
+
+#layout-content-fixed-bg {
+  /* top: $min_content_height; */
+  background: $bg_color2;
+  border: {
+      color: $bg_color;
+      style: dashed;
+      width: 12px;
+      top: none;
+      bottom: none;
+  }
+}
+
+#content {
+  border-top: 14px solid $bg_color;
+  border-bottom: 14px solid $bg_color;
+  border-left: 12px dashed $bg_color;
+  border-right: 12px dashed $bg_color;
+  background: $bg_color2;
+  z-index: 2;
+  padding: 40px;
+  min-height: $min_content_height;
+  margin: 0px 10px 0px 0px;
+}
+
+#footer {
+  color: $color3;
+  background-color: $bg_color;
+  font-size: 10pt;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* generic elements */
+
+/* Super fancy font if any */
+h1, h2, h3, #logo, .section {
+  color: $color3;
+}
+
+body {
+  font-size: 14pt; // 110%
+  font-family: $font-family-nice;
+  min-width: 640px;
+  background: $bg_color;
+  color: $text_color;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+  &:hover {
+    color: $link_alt_color;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: square;
+}
+
+pre, .code {
+  font-size: 11pt;
+  background-color: $code_bg_color;
+  border: 1px solid $code_border_color;
+  border: {
+      left: 6px dashed $bg_color2;
+      right: 6px dashed $bg_color2;
+  };
+  padding: 3px;
+  padding: {
+    left: 8px;
+    right: 8px;
+  };
+  margin: {
+    left: 5px;
+    top: 3px;
+    bottom: 3px;
+  };
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  /* width: 99%; */
+  word-wrap: break-word;
+  font-family: "monospace";
+  .lineno: {
+      border-right: 1px solid $code_border_color;
+  }
+}
+
+/* classes */
+
+.box-link, .tag {
+  @include border-radius(8px);
+  font-size: 10pt;
+  font-weight: bolder;
+  padding: {
+    left: 5px;
+    right: 5px;
+    top: 1px;
+    bottom: 1px;
+  };
+  margin: {
+    left: 2px;
+    right: 2px;
+  };
+  &:hover {
+    border-color: $link_color;
+    border: {
+      bottom: 1px solid;
+      right: 1px solid;
+    }
+    margin-right: 1px;
+    text-decoration: none;
+  }
+}
+
+.field-wrapper {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* form elements */
+label {
+  padding-left: 5px;
+  text-indent: 5px;
+}
+
+// TODO
+
+input {
+  border: 2px solid $form_border_color;
+  background-color: $form_bg_color;
+  @include border-radius(3px);
+}
+
+textarea, input[type="text"], .input-textarea, .input-text {
+  color: $form_text_color;
+  background-color: $form_bg_color;
+  border: 2px solid $form_border_color;
+  @include border-radius(3px);
+  padding: 5px;
+  display: block;
+  width: 100%;
+}
+
+textarea, .input-textarea {
+  font-size: 15pt; // 120%
+  height: 120px;
+}
+
+input[type="text"], .input-text {
+  font-size: 22pt; // 150%
+}

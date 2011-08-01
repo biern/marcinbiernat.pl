@@ -1,0 +1,16 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin debug-border($color: black, $width: 1px, $style: dotted) {
+  border: $width $color $style {}
+}
+
+@mixin debug-background($color: grey, $opacity: 1) {
+  background: $color {}
+  opacity: $opacity {}
+}
+
