@@ -1,39 +1,37 @@
-$menu-width: 180px;
-$submenu-width: 150px;
+$sidebar-width: 180px;
 
 #layout-header,
 #layout-menu,
-#layout-submenu,
+#layout-sidebar,
 #layout-content,
 #layout-footer {
-  //+debug-border
-  //debug-background(red, 0.2)
-  //background: pink
+
 }
 
 #layout-header {
   text-align: right;
   margin: {
-    right: $submenu-width + 30px;
+    right: $sidebar-width + 30px;
   };
 }
 
-#layout-menu {
-  margin-right: $submenu-width + 30px;
+#layout-nav {
+  margin-right: $sidebar-width + 30px;
   text-align: right;
-  /* width: $menu-width */ }
+}
 
-#layout-submenu {
+#layout-sidebar {
   position: fixed;
   right: 0px;
-  width: $submenu_width; }
+  width: $sidebar_width;
+}
 
 #layout-content-fixed-bg {
   z-index: -1;
   position: fixed;
   display: block;
   left: 0px + 8px;
-  right: $submenu_width + 10px + 8px;
+  right: $sidebar_width + 10px + 8px;
   top: 0px;
   bottom: 0px;
 }
@@ -41,8 +39,11 @@ $submenu-width: 150px;
 #layout-content {
   margin: {
     left: 0px;
-    right: $submenu_width; };
-  overflow: hidden; }
+    right: $sidebar_width;
+  };
+  overflow: hidden;
+}
 
 #layout-footer {
-  clear: both; }
+  clear: both;
+}
