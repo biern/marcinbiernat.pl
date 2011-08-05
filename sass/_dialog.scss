@@ -1,0 +1,28 @@
+.yui3-overlay-mask {
+  z-index: 1 !important;
+  background: black;
+  opacity: 0.8;
+}
+
+.yui3-dialog {
+  z-index: 2 !important;
+  background: $bg_color2;
+  border: 2px solid $color1;
+  @include border-radius(10px);
+  .yui3-button-content {
+    margin: 3px;
+  }
+  .yui3-widget-hd {
+    border: 1px solid $color1;
+    font-size: 80%;
+    padding: 5px;
+    .yui3-button {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+  }
+  .yui3-widget-bd {
+    padding: 10px;
+  }
+}
