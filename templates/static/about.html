@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+<script src="{{ STATIC_URL }}js/about.js"></script>
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}
+
+{% block content %}
+<div class="fancy-box">
+
+  <a id="about-email-button" class="fancy-button" href="#">
+    <img src="{{ STATIC_URL }}img/mail_64px.png" style="padding: 20px;"/><br/>
+    <span class="fancy-button-caption">
+      <span class="js-show" style="display: none;">contact</span>
+      <span class="js-hide">email: "contact" at this domain</span>
+    </span>
+  </a>
+
+  <a id="popup" class="fancy-button" href="https://github.com/biern"><img src="{{ STATIC_URL }}img/octocat_128px.png" /><br/><span class="fancy-button-caption">github account</span></a>
+</div>
+
+<div class="fancy-box">
+  <a class="pony-powered" href="http://djangopony.com/" class="ponybadge" title="Magic! Ponies! Django! Whee!"><img src="http://media.djangopony.com/img/small/badge.png" width="210" height="65" alt="pony powered"></a>
+</div>
+{% endblock %}
