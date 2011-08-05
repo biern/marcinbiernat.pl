@@ -1,0 +1,35 @@
+try:
+    from settings_default import *
+except ImportError:
+    pass
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+    # ('Your Name', 'your_email@example.com'),
+)
+
+MANAGERS = ADMINS
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'default.db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+INSTALLED_APPS += (
+    'debug_toolbar',
+)
+
+INTERNAL_IPS = ('127.0.0.1',)
+
+SECRET_KEY = ' - generate one - '
+# To generate SECRET_KEY run:
+import string
+from random import choice
+print ''.join([choice(string.letters + string.digits + string.punctuation) for i in range(50)])
