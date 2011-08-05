@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
+    <meta name="description" content="{% block meta-description %}{% endblock %}" />
+    <title>{% block title %}{% block subtitle %}{% endblock %} Marcin Biernat {% endblock %}</title>
+    <link href="http://fonts.googleapis.com/css?family=Kreon:700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ STATIC_URL }}styles/base.css" media="screen">
+    <script src="http://yui.yahooapis.com/3.3.0/build/yui/yui-min.js"></script>
+    {% block head_extra %}
+    {% endblock %}
+  </head>
+  <body>
+
+    <div id="layout-header">
+      <header>
+        <h1 id="logo">
+          <a href="/">
+            Marcin Biernat
+          </a>
+        </h1>
+        <div id="logo-sub">
+
+        </div>
+      </header>
+    </div>
+
+    <div id="layout-nav">
+      <nav>
+        <ul>
+          <li><a class="section" href="{% url about %}">About</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="layout-sidebar">
+      <div id="sidebar">
+        {% block sidebar %}
+        {% endblock %}
+      </div>
+    </div>
+
+    <div id="layout-content">
+      <div id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <div id="layout-footer">
+        <footer>
+          {% block footer %} {% endblock %}
+          Copyright &copy; Marcin Biernat {% now "Y" %}. All rights reserved.
+        </footer>
+      </div>
+    </div>
+
+    <div id="layout-content-fixed-bg"></div>
+
+  </body>
+</html>
