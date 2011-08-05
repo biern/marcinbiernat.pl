@@ -1,0 +1,51 @@
+{% extends "flatpages/default.html" %}
+
+{% block sidebar %}
+<div class="sidebar-section">Sidebar</div>
+<ul>
+  <li> item 1 </li>
+  <li> <a href="#">some link</a> </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<h2>Some header</h2>
+
+<p>Lorem ipsum dolor sit <a href="#">amet</a>, consectetur adipiscing elit. Duis egestas massa quis leo tempor congue. Nunc tortor sapien, commodo quis luctus id, elementum ac est. Nam blandit fermentum lacinia. In hac habitasse platea dictumst. Pellentesque dignissim ultricies libero quis tincidunt. Vestibulum in dolor sapien, vel sagittis metus. Pellentesque malesuada libero nec leo pulvinar consequat. Curabitur volutpat odio at odio pretium et tempor elit pretium.
+<ul>
+  <li>Etiam vel bibendum libero.</li>
+  <li>Etiam a elit ligula, aliquet luctus tortor.</li>
+  <li>Pellentesque</li>
+  </ul>
+habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent in turpis ac risus sollicitudin commodo. Suspendisse sagittis placerat mauris vel varius. Aenean vitae leo elementum leo adipiscing vehicula eu quis odio. Praesent vitae mauris pulvinar ligula dapibus tempor. Etiam ipsum mi, mollis eget accumsan eu, blandit quis leo. Mauris mi neque, fermentum id dictum a, bibendum sit amet purus.
+
+<p>Aliquam adipiscing mi ut diam porta bibendum. Proin aliquet, neque ac tempus ornare, tellus nibh imperdiet purus, nec tristique massa augue nec odio. Curabitur tortor tortor, tempor in porta et, fringilla vel diam. Quisque tincidunt tristique malesuada. Cras augue sem, laoreet eget sagittis quis, fringilla vel purus. Integer est enim, consequat a faucibus id, commodo non lectus. Cras augue diam, cursus quis bibendum sed, aliquam id urna. Phasellus non sollicitudin est. Donec ut odio urna, dignissim faucibus elit. Sed luctus rhoncus neque quis viverra. Quisque diam nunc, ullamcorper quis facilisis quis, euismod a mauris. Suspendisse potenti.
+
+<br/><br/>
+
+tags: <a href="#" class="tag">lorem</a><a href="#" class="tag">ipsum</a><a href="#" class="tag">dolor sit</a>
+
+<br/><br/>
+
+{% include "debug/style_test_pygments.html" %}
+
+<br/>
+
+<div class="field-wrapper">
+  <input type="checkbox" id="cbk_1_id" checked><label for="cbk_1_id">awsome page created</label></input>
+</div>
+
+<!-- <div class="field-wrapper"> -->
+<!--   <input type="checkbox" id="cbk_2_id"><label for="cbk_2_id">go to sleep</label></input> -->
+<!-- </div> -->
+
+<!-- <div class="field-wrapper"> -->
+<!--   <input value="some short text" /> -->
+<!-- </div> -->
+
+<!-- <div class="field-wrapper"> -->
+<!--   <textarea>Lorem ipsum etc</textarea> -->
+<!-- </div> -->
+
+<a href="http://djangopony.com/" class="ponybadge" title="Magic! Ponies! Django! Whee!"><img src="http://media.djangopony.com/img/small/badge.png" width="210" height="65" alt="pony powered"></a>
+{% endblock %}

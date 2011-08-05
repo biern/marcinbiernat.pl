@@ -1,0 +1,18 @@
+Highlighted code test:
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">universe</span>
+<span class="kn">from</span> <span class="nn">sledge</span> <span class="kn">import</span> <span class="n">Sledge</span>
+
+<span class="c"># Create sledges</span>
+<span class="n">sledge</span> <span class="o">=</span> <span class="n">Sledge</span><span class="p">(</span><span class="n">engine</span><span class="o">=</span><span class="s">&quot;rocket&quot;</span><span class="p">)</span>
+
+<span class="c"># lets roll</span>
+<span class="k">for</span> <span class="n">planet</span> <span class="ow">in</span> <span class="n">universe</span><span class="o">.</span><span class="n">PLANETS</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">planet</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s">&quot;liquid&quot;</span><span class="p">:</span>
+        <span class="n">sledge</span><span class="o">.</span><span class="n">surf</span><span class="p">(</span><span class="n">planet</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+<span class="c"># Finish the job</span>
+<span class="n">universe</span><span class="o">.</span><span class="n">explode</span><span class="p">()</span>
+</pre></div>
+
