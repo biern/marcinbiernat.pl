@@ -39,6 +39,7 @@ $min_content_height: 400px;
 @import "layout";
 @import "blog";
 @import "pygments-native";
+@import "dialog";
 
 /* singletons */
 
@@ -142,6 +143,10 @@ h1, h2, h3, #logo, .section {
   color: $color3;
 }
 
+h2 {
+  text-shadow: black 2px 2px;
+}
+
 body {
   font-size: 14pt; // 110%
   font-family: $font-family-nice;
@@ -221,6 +226,61 @@ pre, .code {
   }
 }
 
+$fancy-button_size: 75px;
+
+.fancy-box {
+  text-align: center;
+}
+
+a.fancy-button {
+  color: $text-color;
+  text-shadow: black 2px 2px;
+  text-decoration: none;
+  background: $bg_color;
+  display: inline-block;
+  min-width: $fancy-button_size;
+  min-height: $fancy-button_size;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  padding: 3px;
+  border: 8px dashed $bg_color2;
+  @include transition(all, 0.2s);
+  @include transform($scale: 0.8);
+  &:hover {
+    background: $color2;
+    @include transform($scale: 1.0);
+    padding: {
+      left: 20px;
+      right: 20px;
+    }
+    img {
+      @include transform($rotate: -10deg);
+    }
+    .fancy-button-caption {
+      display: inline;
+      opacity: 1;
+    }
+  }
+  img {
+    vertical-align: middle;
+    @include transition(all, 0.7s, linear);
+    @include transform($scale: 1.0);
+  }
+
+  .fancy-button-caption {
+    @include transition($duration: 0.5s);
+    vertical-align: bottom;
+    padding: 5px;
+    background: $bg_color2;
+    border: 2px solid $color3;
+    @include border-radius(10px);
+    opacity: 0;
+  }
+}
+
+/* TODO */
+
 .field-wrapper {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -232,7 +292,7 @@ label {
   text-indent: 5px;
 }
 
-// TODO
+/* TODO */
 
 input {
   border: 2px solid $form_border_color;
