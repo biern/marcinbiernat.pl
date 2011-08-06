@@ -6,6 +6,7 @@
 
 @mixin transform($translate: (0px ,0px), $rotate: 0deg, $scale: 1.0) {
   -moz-transform: translate($translate) rotate($rotate) scale($scale);
+  -webkit-transform: translate($translate) rotate($rotate) scale($scale);
 }
 
 @mixin border-radius($radius) {
