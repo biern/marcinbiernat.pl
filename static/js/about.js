@@ -2,7 +2,7 @@ YUI({
     gallery: 'gallery-2011.03.11-23-49'
 }).use("node", "gallery-dialog", function(Y) {
     var dialog = new Y.Dialog({ draggable: false }),
-        name = "contact",
+        name = "me",
         server = "marcinbiernat.pl",
         mail = name + "@" + server,
         content;
