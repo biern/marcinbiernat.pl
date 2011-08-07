@@ -1,0 +1,39 @@
+#about-info {
+  border: 6px dashed $bg_color2;
+  background: $bg_color;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
+
+.about-info-border {
+  margin: 15px;
+  border: 2px solid $color1;
+  @include border-radius(8px);
+}
+
+
+.about-info-record {
+  border-bottom: 1px dotted $color2;
+  text-align: left;
+  padding: {
+    left: 20px;
+    right: 10px;
+    bottom: 2px;
+  };
+  margin-bottom: 5px;
+}
+
+.about-info-type {
+  float: left;
+  clear: both;
+  color: $color1;
+  &:after {
+    content: ":";
+  }
+  padding-right: 8px;
+}
+
+.about-info-value {
+
+}

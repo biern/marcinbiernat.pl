@@ -375,12 +375,63 @@
   color: #3677a9; }
 
 /* Literal.Number.Integer.Long */
+#about-info {
+  border: 6px dashed #1d1f24;
+  background: #22252a;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px; }
+
+.about-info-border {
+  margin: 15px;
+  border: 2px solid #a4c152;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  -webkit-border-radius: 8px; }
+
+.about-info-record {
+  border-bottom: 1px dotted #e6a93f;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 2px;
+  margin-bottom: 5px; }
+
+.about-info-type {
+  float: left;
+  clear: both;
+  color: #a4c152;
+  padding-right: 8px; }
+  .about-info-type:after {
+    content: ":"; }
+
 .yui3-overlay-mask {
   z-index: 1 !important;
   background: black;
   opacity: 0.8; }
 
+.yui3-button-content {
+  cursor: pointer; }
+
 .yui3-dialog {
+  z-index: 2 !important;
+  background: none;
+  border: 6px dashed #1d1f24; }
+  .yui3-dialog .yui3-dialog-content {
+    padding: 15px;
+    background: #1d1f24; }
+  .yui3-dialog .yui3-widget-hd {
+    font-size: 22px;
+    padding: 5px;
+    padding-bottom: 12px; }
+    .yui3-dialog .yui3-widget-hd .yui3-button {
+      text-decoration: none;
+      position: absolute;
+      top: 4px;
+      right: 4px; }
+
+.yui3-dialog .yui3-dialog-mini {
   z-index: 2 !important;
   background: #1d1f24;
   border: 2px solid #a4c152;
@@ -388,17 +439,17 @@
   -moz-border-radius: 10px;
   -khtml-border-radius: 10px;
   -webkit-border-radius: 10px; }
-  .yui3-dialog .yui3-button-content {
+  .yui3-dialog .yui3-dialog-mini .yui3-button-content {
     margin: 3px; }
-  .yui3-dialog .yui3-widget-hd {
+  .yui3-dialog .yui3-dialog-mini .yui3-widget-hd {
     border: 1px solid #a4c152;
     font-size: 80%;
     padding: 5px; }
-    .yui3-dialog .yui3-widget-hd .yui3-button {
+    .yui3-dialog .yui3-dialog-mini .yui3-widget-hd .yui3-button {
       position: absolute;
       top: 4px;
       right: 4px; }
-  .yui3-dialog .yui3-widget-bd {
+  .yui3-dialog .yui3-dialog-mini .yui3-widget-bd {
     padding: 10px; }
 
 /* singletons */
@@ -474,10 +525,10 @@ footer {
 
 /* generic elements */
 /* Super fancy font if any */
-h1, h2, h3, #logo, .section {
+h1, h2, .yui3-dialog .yui3-widget-hd, h3, #logo, .section {
   color: silver; }
 
-h2 {
+h2, .yui3-dialog .yui3-widget-hd {
   text-shadow: black 2px 2px; }
 
 body {

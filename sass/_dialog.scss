@@ -4,7 +4,33 @@
   opacity: 0.8;
 }
 
+.yui3-button-content {
+  cursor: pointer;
+}
+
 .yui3-dialog {
+ z-index: 2 !important;
+ background: none;
+ border: 6px dashed $bg_color2;
+ .yui3-dialog-content {
+   padding: 15px;
+   background: $bg_color2;
+ }
+ .yui3-widget-hd {
+   @extend h2;
+   font-size: 22px;
+   padding: 5px;
+   padding-bottom: 12px;
+   .yui3-button {
+     text-decoration: none;
+     position: absolute;
+     top: 4px;
+     right: 4px;
+   }
+ }
+}
+
+.yui3-dialog .yui3-dialog-mini {
   z-index: 2 !important;
   background: $bg_color2;
   border: 2px solid $color1;
