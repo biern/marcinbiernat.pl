@@ -1,4 +1,2 @@
-# ignore local settings
-settings*.py
 # except default ones
 !settings_default.py
