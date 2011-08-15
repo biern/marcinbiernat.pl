@@ -128,3 +128,7 @@ LOGGING = {
         },
     }
 }
+
+SOUTH_MIGRATION_MODULES = {
+    'articles': 'biern.migrations.articles',
+}
