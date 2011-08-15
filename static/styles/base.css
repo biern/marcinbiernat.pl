@@ -81,10 +81,7 @@
 .highlight .hll {
   background-color: #404040; }
 
-.highlight {
-  background: #202020;
-  color: #d0d0d0; }
-
+/* .highlight  { background: #202020; color: #d0d0d0 } */
 .highlight .c {
   color: #999999;
   font-style: italic; }
@@ -556,27 +553,21 @@ a {
 ul {
   list-style: square; }
 
-pre, .code {
+.codeblock {
   font-size: 11pt;
   background-color: #22252a;
   border: 1px solid silver;
   border-left: 6px dashed #1d1f24;
   border-right: 6px dashed #1d1f24;
-  padding: 3px;
   padding-left: 8px;
   padding-right: 8px;
   margin-left: 5px;
   margin-top: 3px;
   margin-bottom: 3px;
   overflow-x: auto;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap !important;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  /* width: 99%; */
   word-wrap: break-word;
   font-family: "monospace";
-  .lineno-border-right: 1px solid silver; }
+  .linenodiv-border-right: 1px solid silver; }
 
 /* classes */
 .box-link, .tag {
