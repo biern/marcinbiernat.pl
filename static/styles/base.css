@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #layout-header {
   text-align: right;
   margin-right: 210px; }
@@ -29,39 +28,43 @@
 #layout-footer {
   clear: both; }
 
-.post {
-  margin-bottom: 40px; }
-  .post > .header {
-    display: inline-block;
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-left: 10px solid silver;
-    border-top: 3px solid #1d1f24;
-    border-bottom: 3px solid #1d1f24;
-    padding-left: 5px; }
-    .post > .header .title {
-      font-size: 22pt;
-      color: #a4c152;
-      margin-bottom: 5px;
-      margin-top: 2px; }
-      .post > .header .title a {
-        text-decoration: none; }
-    .post > .header .info {
-      font-size: 11pt; }
-  .post .content {
-    /* font-family: $font-family-reading; */ }
-  .post p {
-    text-indent: 20px;
-    line-height: 130%; }
-    .post p:first-letter {
-      /* font-size: 110%; */ }
+.article .title {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-left: 10px solid silver;
+  border-top: 3px solid #1d1f24;
+  border-bottom: 3px solid #1d1f24;
+  padding-left: 5px; }
+.article p {
+  text-indent: 20px;
+  line-height: 130%; }
+  .article p:first-letter {
+    /* font-size: 110%; */ }
 
-.post-summary img {
-  vertical-align: middle; }
-.post-summary .length-Artykuł {
-  font-weight: bold; }
+.article-meta-published {
+  float: left;
+  clear: left; }
+
+.article-meta-word-count {
+  float: left;
+  clear: left; }
+
+.article-meta-author {
+  float: right;
+  clear: right; }
+
+.article-meta-comments {
+  float: right;
+  clear: right; }
+
+.article-meta-addthis {
+  clear: left; }
+
+.article-meta-tags {
+  float: left;
+  clear: left; }
 
 .post-year {
   font-size: small;
@@ -487,14 +490,19 @@ nav a {
   padding-top: 20px;
   font-size: 11pt;
   margin-bottom: 3px;
-  padding: 5px 0 3px 0; }
+  padding: 5px 0px 3px 8px; }
   #sidebar ul {
     padding: 0px;
     margin: 0px;
     list-style: square;
-    padding-left: 22px; }
+    padding-left: 12px; }
+  #sidebar li {
+    margin: 0px; }
   #sidebar .sidebar-section {
-    font-size: 14pt; }
+    margin-left: -8px;
+    margin-bottom: 3px;
+    font-size: 14pt;
+    /* text-shadow: black 2px 2px; */ }
 
 #layout-content-fixed-bg {
   /* top: $min_content_height; */
@@ -576,7 +584,7 @@ pre, .code {
   -moz-border-radius: 8px;
   -khtml-border-radius: 8px;
   -webkit-border-radius: 8px;
-  font-size: 10pt;
+  font-size: 12pt;
   font-weight: bolder;
   padding-left: 5px;
   padding-right: 5px;

@@ -1,46 +1,50 @@
-.post {
-    margin-bottom: 40px;
-    &> .header {
-        display: inline-block;
-        @if $style == "rounded" {
-            @include border-radius(10px);
-        }
-        border: {
-            left: 10px solid $color3;
-            top: 3px solid $bg_color2;
-            bottom: 3px solid $bg_color2;
-        }
-        padding-left: 5px;
-        .title {
-            font-size: 22pt;
-            color: $color1;
-            margin-bottom: 5px;
-            margin-top: 2px;
-            a {
-                text-decoration: none;
-            }
-        }
-        .info {
-            font-size: 11pt; // 80%
-        }
+.article {
+  .title {
+    @include border-radius(10px);
+    border: {
+      left: 10px solid $text_color;
+      top: 3px solid $bg_color2;
+      bottom: 3px solid $bg_color2;
     }
-    .content {
-        /* font-family: $font-family-reading; */
+    padding-left: 5px;
+  }
+
+  p {
+    text-indent: 20px;
+    line-height: 130%;
+    &:first-letter {
+    /* font-size: 110%; */
     }
-    p {
-        text-indent: 20px;
-        line-height: 130%;
-        &:first-letter {
-            /* font-size: 110%; */
-        }
-    }
+  }
 }
 
-.post-summary {
-  img {
-    vertical-align: middle; }
-  .length-Artykuł {
-    font-weight: bold; }
+.article-meta-published {
+  float: left;
+  clear: left;
+}
+
+.article-meta-word-count {
+  float: left;
+  clear: left;
+}
+
+.article-meta-author {
+  float: right;
+  clear: right;
+}
+
+.article-meta-comments {
+  float: right;
+  clear: right;
+}
+
+.article-meta-addthis {
+  clear: left;
+}
+
+.article-meta-tags {
+  float: left;
+  clear: left;
 }
 
 .post-year {
