@@ -50,4 +50,13 @@ MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 INTERNAL_IPS = ('127.0.0.1',)
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '00p2z(p(b5xj$8s$svd(#^x=iia)-ilyqr6j5*rkr*#(h)ftsg'
+try:
+    SECRET_KEY = open('secret_key').read()
+except IOError:
+    import string
+    from random import choice
+    SECRET_KEY = ''.join([
+            choice(string.letters + string.digits + string.punctuation)
+            for i in range(50)])
+    open('secret_key', 'w').write(SECRET_KEY)
+    print('SECRET_KEY generated.')
