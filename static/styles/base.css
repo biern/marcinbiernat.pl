@@ -28,6 +28,25 @@
 #layout-footer {
   clear: both; }
 
+#articles-tag-cloud {
+  font-size: 130%; }
+  #articles-tag-cloud .tag-cloud-0 {
+    font-size: 70%; }
+  #articles-tag-cloud .tag-cloud-1 {
+    font-size: 80%; }
+  #articles-tag-cloud .tag-cloud-2 {
+    font-size: 90%; }
+  #articles-tag-cloud .tag-cloud-3 {
+    font-size: 100%; }
+  #articles-tag-cloud .tag-cloud-4 {
+    font-size: 110%; }
+  #articles-tag-cloud .tag-cloud-5 {
+    font-size: 120%; }
+  #articles-tag-cloud .tag-cloud-6 {
+    font-size: 130%; }
+  #articles-tag-cloud .tag-cloud-7 {
+    font-size: 140%; }
+
 .article .title {
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -42,6 +61,14 @@
   line-height: 130%; }
   .article p:first-letter {
     /* font-size: 110%; */ }
+
+.article-list li {
+  list-style: none;
+  margin-bottom: 40px; }
+
+.article-teaser {
+  margin: 5px;
+  margin-top: 0px; }
 
 .article-meta-published {
   float: left;
@@ -63,6 +90,15 @@
   clear: left; }
 
 .article-meta-tags {
+  float: left;
+  clear: left; }
+
+.article-meta-next {
+  text-align: right;
+  float: right;
+  clear: right; }
+
+.article-meta-previous {
   float: left;
   clear: left; }
 
@@ -534,6 +570,11 @@ h1, h2, .yui3-dialog .yui3-widget-hd, h3, #logo, .section {
   color: silver; }
 
 h2, .yui3-dialog .yui3-widget-hd {
+  font-size: 32px;
+  text-shadow: black 2px 2px; }
+
+h3 {
+  font-size: 25px;
   text-shadow: black 2px 2px; }
 
 body {
@@ -570,7 +611,7 @@ ul {
   .linenodiv-border-right: 1px solid silver; }
 
 /* classes */
-.box-link, .tag {
+.box-link, .tag, #articles-tag-cloud a {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -khtml-border-radius: 8px;
@@ -583,7 +624,7 @@ ul {
   padding-bottom: 1px;
   margin-left: 2px;
   margin-right: 2px; }
-  .box-link:hover, .tag:hover {
+  .box-link:hover, .tag:hover, #articles-tag-cloud a:hover {
     border-color: #a4c152;
     border-bottom: 1px solid;
     border-right: 1px solid;

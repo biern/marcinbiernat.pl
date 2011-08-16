@@ -1,10 +1,12 @@
-{% load i18n %}
+{% load i18n humanize %}
 <article>
   <div id="article-content" class="article">
     <header>
       <h2 class="title">{% trans article.title %}</h2>
     </header>
+    <div>
     {{ article.rendered_content|safe }}
+    </div>
   </div>
 
   {% for att in article.attachments.all %}

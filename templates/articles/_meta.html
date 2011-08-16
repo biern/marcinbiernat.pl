@@ -14,15 +14,15 @@
     <!-- <p class="article-meta-word-count"><strong>{% trans 'Word Count' %}</strong>: {{ article.word_count|intcomma }}</p> -->
 
     {% if article.get_next_article %}
-    <p>
-        <strong>{% trans 'Next' %}</strong>:
+    <p class="article-meta-next">
+        <strong>{% trans 'Next' %}</strong>:<br/>
         <a href="{{ article.get_next_article.get_absolute_url }}">{{ article.get_next_article.title }}</a>
     </p>
     {% endif %}
 
     {% if article.get_previous_article %}
-    <p>
-        <strong>{% trans 'Previous' %}</strong>:
+    <p class="article-meta-previous">
+        <strong>{% trans 'Previous' %}</strong>:<br/>
         <a href="{{ article.get_previous_article.get_absolute_url }}">{{ article.get_previous_article.title }}</a>
     </p>
     {% endif %}
