@@ -1,46 +1,90 @@
-.post {
-    margin-bottom: 40px;
-    &> .header {
-        display: inline-block;
-        @if $style == "rounded" {
-            @include border-radius(10px);
-        }
-        border: {
-            left: 10px solid $color3;
-            top: 3px solid $bg_color2;
-            bottom: 3px solid $bg_color2;
-        }
-        padding-left: 5px;
-        .title {
-            font-size: 22pt;
-            color: $color1;
-            margin-bottom: 5px;
-            margin-top: 2px;
-            a {
-                text-decoration: none;
-            }
-        }
-        .info {
-            font-size: 11pt; // 80%
-        }
-    }
-    .content {
-        /* font-family: $font-family-reading; */
-    }
-    p {
-        text-indent: 20px;
-        line-height: 130%;
-        &:first-letter {
-            /* font-size: 110%; */
-        }
-    }
+#articles-tag-cloud {
+  a {
+    @extend .tag;
+  }
+  font-size: 130%;
+  .tag-cloud-0 { font-size: 70%; }
+  .tag-cloud-1 { font-size: 80%; }
+  .tag-cloud-2 { font-size: 90%; }
+  .tag-cloud-3 { font-size: 100%; }
+  .tag-cloud-4 { font-size: 110%; }
+  .tag-cloud-5 { font-size: 120%; }
+  .tag-cloud-6 { font-size: 130%; }
+  .tag-cloud-7 { font-size: 140%; }
 }
 
-.post-summary {
-  img {
-    vertical-align: middle; }
-  .length-Artykuł {
-    font-weight: bold; }
+
+
+.article {
+  .title {
+    @include border-radius(10px);
+    border: {
+      left: 10px solid $text_color;
+      top: 3px solid $bg_color2;
+      bottom: 3px solid $bg_color2;
+    }
+    padding-left: 5px;
+  }
+
+  p {
+    text-indent: 20px;
+    line-height: 130%;
+    &:first-letter {
+    /* font-size: 110%; */
+    }
+  }
+}
+
+.article-list {
+  li {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+}
+
+.article-teaser {
+  margin: 5px;
+  margin-top: 0px;
+}
+
+.article-meta-published {
+  float: left;
+  clear: left;
+}
+
+.article-meta-word-count {
+  float: left;
+  clear: left;
+}
+
+.article-meta-author {
+  float: right;
+  clear: right;
+}
+
+.article-meta-comments {
+  float: right;
+  clear: right;
+}
+
+.article-meta-addthis {
+  clear: left;
+}
+
+.article-meta-tags {
+  float: left;
+  clear: left;
+}
+
+.article-meta-next {
+  text-align: right;
+  float: right;
+  clear: right;
+}
+
+.article-meta-previous {
+  float: left;
+  clear: left;
 }
 
 .post-year {

@@ -1,5 +1,4 @@
-# ignore local settings
 settings*.py
-# except default ones
+secret_key
 !settings_default.py
 migrations/
